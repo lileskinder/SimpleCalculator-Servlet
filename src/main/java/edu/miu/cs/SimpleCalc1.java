@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/Calculator")
+//@WebServlet("/Calculator")
 public class SimpleCalc1 extends HttpServlet {
 
 
@@ -34,7 +34,6 @@ public class SimpleCalc1 extends HttpServlet {
             int m1 = Integer.parseInt(req.getParameter("multFirstNum"));
             int m2 = Integer.parseInt(req.getParameter("multecondNum"));
             int mult = m1*m2;
-//            req.setAttribute(mult, );
             out.println(m1 + " * " + m2 + " = " + mult + "<br>");
         }
 
