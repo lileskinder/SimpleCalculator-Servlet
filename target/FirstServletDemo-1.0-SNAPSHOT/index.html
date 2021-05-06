@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome</title>
+
+        <style>
+            input {
+                padding: 10px;
+                width: 15%;
+            }
+
+            form {
+                width: 500px;
+                margin: 0 auto;
+                text-align-last: center;
+            }
+
+        </style>
+    </head>
+    <body>
+    <form action="Calculator" method="get">
+        <input type="number" id="addFirstNum" name="addFirstNum" value="">
+        <span> + </span>
+        <input type="number" id="addSecondNum" name="addSecondNum" value="">
+        <span> = </span>
+        <input type="number" id="addResult" name="addResult" value="${add}" disabled><br><br>
+
+        <input type="number" id="multFirstNum" name="multFirstNum" value="">
+        <span> * </span>
+        <input type="number" id="multecondNum" name="multecondNum" value="">
+        <span> = </span>
+        <input type="number" id="multResult" name="multResult" value="${mult}" disabled><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </body>
+</html>
