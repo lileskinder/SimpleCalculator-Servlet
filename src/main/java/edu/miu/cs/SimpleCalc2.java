@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/Calculator")
-public class HelloServlet extends HttpServlet {
+@WebServlet("/Calculator2")
+public class SimpleCalc2 extends HttpServlet {
 
 
 
@@ -23,16 +23,17 @@ public class HelloServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out= resp.getWriter();
 
-        if(!req.getParameter("addFirstNum").isEmpty() && !req.getParameter("addSecondNum").isEmpty()) {
-            int a1 = Integer.parseInt(req.getParameter("addFirstNum"));
-            int a2 = Integer.parseInt(req.getParameter("addSecondNum"));
+        if(!req.getParameter("addFirstNum1").isEmpty() && !req.getParameter("addSecondNum1").isEmpty()) {
+            int a1 = Integer.parseInt(req.getParameter("addFirstNum1"));
+            int a2 = Integer.parseInt(req.getParameter("addSecondNum1"));
             int add = a1+a2;
+            out.println("Simple calc2");
             out.println(a1 + " + " + a2 + " = " + add + "<br>");
         }
 
-        if(!req.getParameter("multFirstNum").isEmpty() && !req.getParameter("multecondNum").isEmpty()) {
-            int m1 = Integer.parseInt(req.getParameter("multFirstNum"));
-            int m2 = Integer.parseInt(req.getParameter("multecondNum"));
+        if(!req.getParameter("multFirstNum1").isEmpty() && !req.getParameter("multecondNum1").isEmpty()) {
+            int m1 = Integer.parseInt(req.getParameter("multFirstNum1"));
+            int m2 = Integer.parseInt(req.getParameter("multecondNum1"));
             int mult = m1*m2;
 //            req.setAttribute(mult, );
             out.println(m1 + " * " + m2 + " = " + mult + "<br>");
